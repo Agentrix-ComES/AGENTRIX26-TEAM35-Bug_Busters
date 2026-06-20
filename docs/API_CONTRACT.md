@@ -47,6 +47,16 @@ const payload = {
 };
 ```
 
+> [!WARNING]
+> **Integration Mismatches Detected:**
+> 1. **Port Mismatch:** Frontend `services/api.js` points to `http://localhost:8000/api/plan`, but backend runs on `3000`.
+> 2. **Response Structure Mismatches:**
+>    - `mealPlan`: Frontend expects `type` (Breakfast/Lunch/Dinner), but backend provides `day` (Monday/Tuesday).
+>    - `shoppingList`: Frontend expects a categorized object (e.g., `{"Vegetables": [...]}`), but backend provides a flat array `[...]`.
+>    - `priceComparison`: Frontend expects `plan.priceComparison` with `keells`, `cargills`, `arpico` keys. Backend provides `plan.vendorTable` with a nested `prices` object and `recommendedStore`.
+>    - `summary`: Frontend expects `plan.summary.estimatedTotal`/`savings`. Backend provides `plan.totalEstimatedCost` and `plan.estimatedSavings`.
+> These mismatches must be resolved before the integration is considered complete.
+
 #### Example Request Body (Normalized)
 ```json
 {

@@ -1,0 +1,42 @@
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+    padding: 15px 0;
+}
+
+.navbar-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2e7d32;
+    text-decoration: none;
+}
+
+.navbar-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+.navbar-links a:hover {
+    color: #2e7d32;
+}
+
+@media (max-width: 480px) {
+    .navbar-links {
+        display: none;
+        /* Keep it simple for mobile as per requirement */
+    }
+}

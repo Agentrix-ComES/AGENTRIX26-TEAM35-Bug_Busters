@@ -1,5 +1,10 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "main": "server.js"
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^2.3.0",
+    "cors": "^2.8.6",
+    "express": "^5.2.1"
+  }
 }

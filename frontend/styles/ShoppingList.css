@@ -1,0 +1,95 @@
+.shopping-list-container {
+    margin-bottom: 40px;
+}
+
+.shopping-section {
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 1.2rem;
+    color: #2e7d32;
+    margin-bottom: 15px;
+    border-left: 4px solid #2e7d32;
+    padding-left: 10px;
+}
+
+.list-card {
+    padding: 0;
+}
+
+.list-item {
+    padding: 15px 20px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.list-item:last-child {
+    border-bottom: none;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    user-select: none;
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    height: 22px;
+    width: 22px;
+    background-color: #eee;
+    border-radius: 4px;
+    margin-right: 15px;
+    position: relative;
+}
+
+.checkbox-container:hover input~.checkmark {
+    background-color: #ccc;
+}
+
+.checkbox-container input:checked~.checkmark {
+    background-color: #2e7d32;
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked~.checkmark:after {
+    display: block;
+}
+
+.checkbox-container .checkmark:after {
+    left: 8px;
+    top: 4px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.item-name {
+    font-size: 1rem;
+}
+
+.item-qty {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+    color: #999;
+}

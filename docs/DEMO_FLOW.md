@@ -18,6 +18,14 @@ node server.js
 
 You should see the message: `Backend running on port 3000`.
 
+```bash
+# 3. In a new terminal, navigate to the frontend directory
+cd frontend
+
+# 4. Start the Vite development server
+npm run dev
+```
+
 ---
 
 ## 2. Test Scenarios (Demo Script)
