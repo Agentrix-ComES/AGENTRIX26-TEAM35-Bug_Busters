@@ -24,67 +24,70 @@ You should see the message: `Backend running on port 3000`.
 
 Below are three demo scenarios you can run using standard command-line tools to show the supervisor pipeline in action.
 
+> [!NOTE]
+> For the MVP implementation, the backend destructures and processes **only** the `budget` and `pantryItems` fields. The parameters `familySize`, `dietaryPreference`, and `location` are currently ignored in the code and serve as placeholders for future extensibility.
+
 ### Scenario A: Low Budget Constraint (LKR 1,000)
-**Goal**: Verify that when a user inputs a very tight budget, the system filters out expensive proteins and selects only the cheapest staple flour and basic vegetables to stay within limits.
+**Goal**: Verify that when a user inputs a tight budget, the system restricts the ingredient database by calculating a lower ingredient price cap (`maxIngredientPrice = 250 LKR`). Prohibitively expensive items (like proteins or premium flour) are filtered out, and the meal plan relies on cheap, available vegetables.
 
 - **PowerShell (Windows)**:
   ```powershell
-  Invoke-RestMethod -Uri "http://localhost:3000/api/plan" -Method Post -ContentType "application/json" -Body '{"familySize": 2, "budget": 1000, "dietaryPreference": "vegetarian", "pantryItems": [], "location": "Colombo"}' | ConvertTo-Json -Depth 5
+  Invoke-RestMethod -Uri "http://localhost:3000/api/plan" -Method Post -ContentType "application/json" -Body '{"budget": 1000, "pantryItems": [], "familySize": 2, "dietaryPreference": "vegetarian", "location": "Colombo"}' | ConvertTo-Json -Depth 5
   ```
 
 - **Bash / macOS / Linux**:
   ```bash
   curl -X POST http://localhost:3000/api/plan \
        -H "Content-Type: application/json" \
-       -d '{"familySize": 2, "budget": 1000, "dietaryPreference": "vegetarian", "pantryItems": [], "location": "Colombo"}'
+       -d '{"budget": 1000, "pantryItems": [], "familySize": 2, "dietaryPreference": "vegetarian", "location": "Colombo"}'
   ```
 
 - **Expected Outcome**:
-  - The `priceContext.affordableItemCount` will be low.
-  - The generated meal plan will consist of cheap vegetables and flour.
-  - The total cost will remain under the budget.
+  - `priceContext.affordableItemCount` is significantly reduced.
+  - Premium items like `Seven Star Chakki Atta Flour` (price 325) are filtered out.
+  - The meal planning fallback mechanisms substitute the cheapest available items (e.g. pumpkin and cabbage) into the meal description.
 
 ---
 
 ### Scenario B: Pantry Item Exclusion (Pantry includes "Carrot")
-**Goal**: Verify that ingredients already in the user's pantry are filtered out by the RAG Retrieval Agent and omitted from the generated meal plan or shopping list (avoiding unnecessary costs).
+**Goal**: Verify that ingredients already in the user's pantry are filtered out by the RAG Retrieval Agent. These items will be excluded from the generated shopping list and vendor comparison table to prevent duplicate purchases.
 
 - **PowerShell (Windows)**:
   ```powershell
-  Invoke-RestMethod -Uri "http://localhost:3000/api/plan" -Method Post -ContentType "application/json" -Body '{"familySize": 4, "budget": 5000, "dietaryPreference": "non-veg", "pantryItems": ["Carrot"], "location": "Colombo"}' | ConvertTo-Json -Depth 5
+  Invoke-RestMethod -Uri "http://localhost:3000/api/plan" -Method Post -ContentType "application/json" -Body '{"budget": 5000, "pantryItems": ["Carrot"], "familySize": 4, "dietaryPreference": "non-veg", "location": "Colombo"}' | ConvertTo-Json -Depth 5
   ```
 
 - **Bash / macOS / Linux**:
   ```bash
   curl -X POST http://localhost:3000/api/plan \
        -H "Content-Type: application/json" \
-       -d '{"familySize": 4, "budget": 5000, "dietaryPreference": "non-veg", "pantryItems": ["Carrot"], "location": "Colombo"}'
+       -d '{"budget": 5000, "pantryItems": ["Carrot"], "familySize": 4, "dietaryPreference": "non-veg", "location": "Colombo"}'
   ```
 
 - **Expected Outcome**:
-  - The RAG agent filters out "Carrot".
-  - The shopping list and vendor table will NOT contain "Carrot".
+  - The RAG agent normalizes and filters out "Carrot" from the active ingredient list.
+  - The final shopping list and vendor table will NOT contain "Carrot".
 
 ---
 
 ### Scenario C: High Budget Constraint (LKR 10,000)
-**Goal**: Verify that with a higher budget, the system opens up access to premium ingredients, allowing proteins like Maldive Fish to be retrieved and integrated into meals.
+**Goal**: Verify that with a higher budget, the system opens up access to premium ingredients, allowing proteins like Maldive Fish or chicken to be retrieved and integrated into meals.
 
 - **PowerShell (Windows)**:
   ```powershell
-  Invoke-RestMethod -Uri "http://localhost:3000/api/plan" -Method Post -ContentType "application/json" -Body '{"familySize": 4, "budget": 10000, "dietaryPreference": "non-veg", "pantryItems": [], "location": "Colombo"}' | ConvertTo-Json -Depth 5
+  Invoke-RestMethod -Uri "http://localhost:3000/api/plan" -Method Post -ContentType "application/json" -Body '{"budget": 10000, "pantryItems": [], "familySize": 4, "dietaryPreference": "non-veg", "location": "Colombo"}' | ConvertTo-Json -Depth 5
   ```
 
 - **Bash / macOS / Linux**:
   ```bash
   curl -X POST http://localhost:3000/api/plan \
        -H "Content-Type: application/json" \
-       -d '{"familySize": 4, "budget": 10000, "dietaryPreference": "non-veg", "pantryItems": [], "location": "Colombo"}'
+       -d '{"budget": 10000, "pantryItems": [], "familySize": 4, "dietaryPreference": "non-veg", "location": "Colombo"}'
   ```
 
 - **Expected Outcome**:
-  - The `priceContext.affordableItemCount` will include proteins like "My Choice Maldive Fish Chips".
-  - The meal plan incorporates proteins (e.g. Tuesday: Maldive Fish).
+  - `priceContext.affordableItemCount` includes proteins such as `Chicken Neck` or `My Choice Maldive Fish Chips`.
+  - The meal plan incorporates proteins (e.g. Tuesday: Chicken Neck / Maldive Fish).
 
 ---
 
@@ -97,24 +100,25 @@ sequenceDiagram
     autonumber
     actor User as Judge / User
     participant FE as Frontend UI (or terminal)
-    participant SA as Supervisor Agent (server.js)
-    participant RAG as RAG Retrieval Agent (priceService)
-    participant MP as Meal Planning Agent (aiService)
-    participant PO as Price Optimizer (priceService)
-    participant SS as Savings Summary (costService)
+    participant SA as Supervisor Agent (server.js / api/plan.js)
+    participant RAG as RAG Retrieval Agent (priceService.js)
+    participant MP as Meal Planning Agent (aiService.js)
+    participant PO as Price Optimizer (priceService.js)
+    participant SS as Savings Summary (costService.js)
 
-    User ->> FE: Selects Family Size (4), Budget (5000), Pantry: [Carrot]
-    FE ->> SA: POST /api/plan
+    User ->> FE: Submits: familySize (4), weeklyBudgetLKR (12000), pantryItems: [rice, dhal]
+    Note over FE: Normalizes weeklyBudgetLKR -> budget
+    FE ->> SA: POST /api/plan (budget: 12000, pantryItems: [rice, dhal])
     activate SA
 
-    Note over SA: Normalizes input & triggers pipeline
+    Note over SA: Triggers pipeline execution
 
-    SA ->> RAG: getPriceContext(budget, pantryItems)
-    Note over RAG: Filters out 'Carrot'<br/>Finds affordable in-stock items
+    SA ->> RAG: getPriceContext({ budget, pantryItems })
+    Note over RAG: Excludes 'rice' and 'dhal'<br/>Applies cap: maxIngredientPrice = 3000 LKR
     RAG -->> SA: Return affordable price context
 
     SA ->> MP: generateMealPlan(userInput, priceContext)
-    Note over MP: Generates meals & shopping list
+    Note over MP: Groups by category & selects cheapest items
     MP -->> SA: Return mealPlan + shoppingList
 
     SA ->> PO: comparePrices(shoppingList)
@@ -122,8 +126,8 @@ sequenceDiagram
     PO -->> SA: Return vendorTable with cheapest stores
 
     SA ->> SS: calculate(vendorTable)
-    Note over SS: Computes total cost & savings vs baseline
-    SS -->> SA: Return totalCost & savings
+    Note over SS: Computes total cost & savings vs Keells baseline
+    SS -->> SA: Return total & savings
 
     SA -->> FE: Return 200 OK (JSON Response)
     deactivate SA
