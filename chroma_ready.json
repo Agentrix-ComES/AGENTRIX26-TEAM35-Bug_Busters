@@ -1,0 +1,434 @@
+[
+  {
+    "id": "cargills_renuka_coconut_milk_powder",
+    "text": "Renuka Coconut Milk Powder Store: Cargills Price: 896 LKR Size: 300 g Category: Grocery Availability: in stock"
+  },
+  {
+    "id": "cargills_catch_crispy_fried_chicken_mix",
+    "text": "Catch Crispy Fried Chicken Mix Store: Cargills Price: 140 LKR Size: 100 g Category: Seasoning / Mix Availability: in stock"
+  },
+  {
+    "id": "cargills_knorr_coconut_milk_powder",
+    "text": "Knorr Coconut Milk Powder Store: Cargills Price: 896 LKR Size: 300 g Category: Grocery Availability: in stock"
+  },
+  {
+    "id": "cargills_catch_ulundu_flour",
+    "text": "Catch Ulundu Flour Store: Cargills Price: 384 LKR Size: 200 g Category: Flour Availability: in stock"
+  },
+  {
+    "id": "cargills_turkey_canola_oil",
+    "text": "Turkey Canola Oil Store: Cargills Price: 1960 LKR Size: 1 L Category: Cooking Oil Availability: in stock"
+  },
+  {
+    "id": "cargills_knorr_seasoning_cubes_handy_pack",
+    "text": "Knorr Seasoning Cubes Handy Pack Store: Cargills Price: 780 LKR Size: 120 g Category: Seasoning / Mix Availability: in stock"
+  },
+  {
+    "id": "cargills_kist_squeeasy_sauce_devilled",
+    "text": "Kist Squeeasy Sauce Devilled Store: Cargills Price: 290 LKR Size: 200 g Category: Sauce Availability: in stock"
+  },
+  {
+    "id": "cargills_seven_star_chakki_atta_flour",
+    "text": "Seven Star Chakki Atta Flour Store: Cargills Price: 325 LKR Size: 1 kg Category: Flour Availability: in stock"
+  },
+  {
+    "id": "cargills_silvermill_coconut_milk",
+    "text": "Silvermill Coconut Milk Store: Cargills Price: 375 LKR Size: 330 ml Category: Fruit / Ingredient Availability: in stock"
+  },
+  {
+    "id": "cargills_gold_winner_sunflower_oil",
+    "text": "Gold Winner Sunflower Oil Store: Cargills Price: 3250 LKR Size: 2 L Category: Cooking Oil Availability: in stock"
+  },
+  {
+    "id": "cargills_maggi_chicken_flavored_seasoning_cubes",
+    "text": "MAGGI Chicken Flavored Seasoning Cubes Store: Cargills Price: 72 LKR Size: 16 g Category: Seasoning / Mix Availability: in stock"
+  },
+  {
+    "id": "cargills_edinborough_fish_sauce",
+    "text": "Edinborough Fish Sauce Store: Cargills Price: 590.75 LKR Size: 350 ml Category: Sauce Availability: in stock"
+  },
+  {
+    "id": "cargills_fortune_cocofine_rbd_coconut_oil",
+    "text": "Fortune Cocofine RBD Coconut Oil Store: Cargills Price: 4500 LKR Size: 2.9 L Category: Cooking Oil Availability: in stock"
+  },
+  {
+    "id": "cargills_mas_chinese_fried_rice_seasoning",
+    "text": "Ma's Chinese Fried Rice Seasoning Store: Cargills Price: 255 LKR Size: 50 g Category: Seasoning / Mix Availability: in stock"
+  },
+  {
+    "id": "cargills_catch_bajji_bonda_batter_mix",
+    "text": "Catch Bajji Bonda Batter Mix Store: Cargills Price: 161.5 LKR Size: 100 g Category: Seasoning / Mix Availability: in stock"
+  },
+  {
+    "id": "cargills_my_choice_maldive_fish_chips",
+    "text": "My Choice Maldive Fish Chips Store: Cargills Price: 460 LKR Size: 100 g Category: Fish / Seafood Availability: in stock"
+  },
+  {
+    "id": "cargills_coconut_miracle_pure_virgin_coconut_oil",
+    "text": "Coconut Miracle Pure Virgin Coconut Oil Store: Cargills Price: 1799 LKR Size: 500 ml Category: Cooking Oil Availability: in stock"
+  },
+  {
+    "id": "cargills_marina_coconut_oil",
+    "text": "Marina Coconut Oil Store: Cargills Price: 1450 LKR Size: 675 ml Category: Cooking Oil Availability: in stock"
+  },
+  {
+    "id": "cargills_edinborough_soy_sauce",
+    "text": "Edinborough Soy Sauce Store: Cargills Price: 320 LKR Size: 350 g Category: Sauce Availability: in stock"
+  },
+  {
+    "id": "cargills_big_onion",
+    "text": "Big Onion Store: Cargills Price: 165 LKR Size: 500 g Category: Vegetable Availability: in stock"
+  },
+  {
+    "id": "cargills_coconut",
+    "text": "Coconut Store: Cargills Price: 414 LKR Size: 3 pcs Category: Fruit / Ingredient Availability: in stock"
+  },
+  {
+    "id": "cargills_carrot",
+    "text": "Carrot Store: Cargills Price: 280 LKR Size: 500 g Category: Vegetable Availability: in stock"
+  },
+  {
+    "id": "cargills_potatoes",
+    "text": "Potatoes Store: Cargills Price: 185 LKR Size: 500 g Category: Vegetable Availability: in stock"
+  },
+  {
+    "id": "cargills_tomato",
+    "text": "Tomato Store: Cargills Price: 430 LKR Size: 500 g Category: Vegetable Availability: in stock"
+  },
+  {
+    "id": "cargills_garlic",
+    "text": "Garlic Store: Cargills Price: 225 LKR Size: 250 g Category: Vegetable Availability: in stock"
+  },
+  {
+    "id": "cargills_green_beans",
+    "text": "Green Beans Store: Cargills Price: 195 LKR Size: 250 g Category: Vegetable Availability: in stock"
+  },
+  {
+    "id": "cargills_brinjal",
+    "text": "Brinjal Store: Cargills Price: 126 LKR Size: 350 g Category: Grocery Availability: in stock"
+  },
+  {
+    "id": "cargills_raw_ginger",
+    "text": "Raw Ginger Store: Cargills Price: 180 LKR Size: 150 g Category: Vegetable Availability: in stock"
+  },
+  {
+    "id": "cargills_capsicum",
+    "text": "Capsicum Store: Cargills Price: 140 LKR Size: 250 g Category: Vegetable Availability: in stock"
+  },
+  {
+    "id": "cargills_sweet_potatoes",
+    "text": "Sweet Potatoes Store: Cargills Price: 146 LKR Size: 500 g Category: Vegetable Availability: in stock"
+  },
+  {
+    "id": "cargills_leeks",
+    "text": "Leeks Store: Cargills Price: 130 LKR Size: 250 g Category: Grocery Availability: in stock"
+  },
+  {
+    "id": "cargills_cauliflower",
+    "text": "Cauliflower Store: Cargills Price: 276 LKR Size: 300 g Category: Grocery Availability: in stock"
+  },
+  {
+    "id": "cargills_green_chillies",
+    "text": "Green Chillies Store: Cargills Price: 88 LKR Size: 100 g Category: Grocery Availability: in stock"
+  },
+  {
+    "id": "cargills_cabbage",
+    "text": "Cabbage Store: Cargills Price: 70 LKR Size: 500 g Category: Vegetable Availability: in stock"
+  },
+  {
+    "id": "cargills_red_onion",
+    "text": "Red Onion Store: Cargills Price: 128 LKR Size: 250 g Category: Vegetable Availability: in stock"
+  },
+  {
+    "id": "cargills_beetroot",
+    "text": "Beetroot Store: Cargills Price: 143 LKR Size: 250 g Category: Grocery Availability: in stock"
+  },
+  {
+    "id": "cargills_lime",
+    "text": "Lime Store: Cargills Price: 175 LKR Size: 250 g Category: Grocery Availability: in stock"
+  },
+  {
+    "id": "cargills_broccoli",
+    "text": "Broccoli Store: Cargills Price: 705 LKR Size: 300 g Category: Vegetable Availability: in stock"
+  },
+  {
+    "id": "cargills_pumpkin",
+    "text": "Pumpkin Store: Cargills Price: 50 LKR Size: 500 g Category: Grocery Availability: in stock"
+  },
+  {
+    "id": "keells_allagoduw",
+    "text": "Allagoduw Store: Keells Price: 1690 LKR Size: per kg Category: Fish / Seafood Availability: in stock"
+  },
+  {
+    "id": "keells_cleaned_handella",
+    "text": "Cleaned Handella Store: Keells Price: 3400 LKR Size: per kg Category: Fish / Seafood Availability: in stock"
+  },
+  {
+    "id": "keells_kumbalawa",
+    "text": "Kumbalawa Store: Keells Price: 1890 LKR Size: per kg Category: Grocery Availability: in stock"
+  },
+  {
+    "id": "keells_linna",
+    "text": "Linna Store: Keells Price: 1790 LKR Size: per kg Category: Grocery Availability: in stock"
+  },
+  {
+    "id": "keells_moralla_fish",
+    "text": "Moralla Fish Store: Keells Price: 1790 LKR Size: per kg Category: Fish / Seafood Availability: in stock"
+  },
+  {
+    "id": "keells_paraw_small",
+    "text": "Paraw Small Store: Keells Price: 2290 LKR Size: per kg Category: Fish / Seafood Availability: in stock"
+  },
+  {
+    "id": "keells_prawns_medium",
+    "text": "Prawns Medium Store: Keells Price: 1790 LKR Size: per kg Category: Grocery Availability: in stock"
+  },
+  {
+    "id": "keells_sudaya",
+    "text": "Sudaya Store: Keells Price: 980 LKR Size: per kg Category: Fish / Seafood Availability: in stock"
+  },
+  {
+    "id": "keells_thalapath_small",
+    "text": "Thalapath Small Store: Keells Price: 2370 LKR Size: per kg Category: Grocery Availability: in stock"
+  },
+  {
+    "id": "keells_cleaned_cuttlefish",
+    "text": "Cleaned Cuttlefish Store: Keells Price: 2590 LKR Size: per kg Category: Fish / Seafood Availability: in stock"
+  },
+  {
+    "id": "keells_oyster_mushroom",
+    "text": "Oyster Mushroom Store: Keells Price: 200 LKR Size: per unit Category: Grocery Availability: in stock"
+  },
+  {
+    "id": "keells_ash_plantains",
+    "text": "Ash Plantains Store: Keells Price: 176 LKR Size: per kg Category: Grocery Availability: in stock"
+  },
+  {
+    "id": "keells_batana",
+    "text": "Batana Store: Keells Price: 920 LKR Size: per kg Category: Grocery Availability: in stock"
+  },
+  {
+    "id": "keells_beetroot",
+    "text": "Beetroot Store: Keells Price: 400 LKR Size: per kg Category: Grocery Availability: in stock"
+  },
+  {
+    "id": "keells_bell_pepper_green",
+    "text": "Bell Pepper Green Store: Keells Price: 990 LKR Size: per kg Category: Grocery Availability: in stock"
+  },
+  {
+    "id": "keells_bell_pepper_red",
+    "text": "Bell Pepper Red Store: Keells Price: 1920 LKR Size: per kg Category: Grocery Availability: in stock"
+  },
+  {
+    "id": "keells_bell_pepper_yellow",
+    "text": "Bell Pepper Yellow Store: Keells Price: 1490 LKR Size: per kg Category: Grocery Availability: in stock"
+  },
+  {
+    "id": "keells_big_onions",
+    "text": "Big Onions Store: Keells Price: 280 LKR Size: per kg Category: Vegetable Availability: in stock"
+  },
+  {
+    "id": "keells_bitter_gourd",
+    "text": "Bitter Gourd Store: Keells Price: 680 LKR Size: per kg Category: Grocery Availability: in stock"
+  },
+  {
+    "id": "keells_brinjals",
+    "text": "Brinjals Store: Keells Price: 420 LKR Size: per kg Category: Grocery Availability: in stock"
+  },
+  {
+    "id": "keells_broccoli",
+    "text": "Broccoli Store: Keells Price: 3780 LKR Size: per kg Category: Vegetable Availability: in stock"
+  },
+  {
+    "id": "keells_cabbage",
+    "text": "Cabbage Store: Keells Price: 136 LKR Size: per kg Category: Vegetable Availability: in stock"
+  },
+  {
+    "id": "keells_cabbage_leaves",
+    "text": "Cabbage Leaves Store: Keells Price: 380 LKR Size: per kg Category: Vegetable Availability: in stock"
+  },
+  {
+    "id": "keells_capsicum",
+    "text": "Capsicum Store: Keells Price: 540 LKR Size: per kg Category: Vegetable Availability: in stock"
+  },
+  {
+    "id": "keells_carrot",
+    "text": "Carrot Store: Keells Price: 560 LKR Size: per kg Category: Vegetable Availability: in stock"
+  },
+  {
+    "id": "keells_cauliflower",
+    "text": "Cauliflower Store: Keells Price: 940 LKR Size: per kg Category: Grocery Availability: in stock"
+  },
+  {
+    "id": "keells_celery",
+    "text": "Celery Store: Keells Price: 1890 LKR Size: per kg Category: Grocery Availability: in stock"
+  },
+  {
+    "id": "keells_cherry_tomato",
+    "text": "Cherry Tomato Store: Keells Price: 4440 LKR Size: per kg Category: Vegetable Availability: in stock"
+  },
+  {
+    "id": "keells_chinese_cabbage",
+    "text": "Chinese Cabbage Store: Keells Price: 1350 LKR Size: per kg Category: Vegetable Availability: in stock"
+  },
+  {
+    "id": "keells_chow_chow",
+    "text": "Chow Chow Store: Keells Price: 360 LKR Size: per kg Category: Grocery Availability: in stock"
+  },
+  {
+    "id": "keells_coconut",
+    "text": "Coconut Store: Keells Price: 139 LKR Size: per unit Category: Fruit / Ingredient Availability: in stock"
+  },
+  {
+    "id": "keells_coriander_leaves",
+    "text": "Coriander Leaves Store: Keells Price: 1620 LKR Size: per kg Category: Grocery Availability: in stock"
+  },
+  {
+    "id": "keells_cucumber",
+    "text": "Cucumber Store: Keells Price: 176 LKR Size: per kg Category: Grocery Availability: in stock"
+  },
+  {
+    "id": "keells_chicken_wings",
+    "text": "Chicken Wings Store: Keells Price: 1050 LKR Size: per kg Category: Meat Availability: in stock"
+  },
+  {
+    "id": "keells_chilled_whole_chicken_skinless",
+    "text": "Chilled Whole Chicken Skinless Store: Keells Price: 1390 LKR Size: per kg Category: Meat Availability: in stock"
+  },
+  {
+    "id": "keells_cic_half_chicken",
+    "text": "CIC Half Chicken Store: Keells Price: 1370 LKR Size: per kg Category: Meat Availability: in stock"
+  },
+  {
+    "id": "keells_cic_skinless_whole_chicken",
+    "text": "CIC Skinless Whole Chicken Store: Keells Price: 1520 LKR Size: per kg Category: Meat Availability: in stock"
+  },
+  {
+    "id": "keells_cic_whole_chicken_with_giblet",
+    "text": "CIC Whole Chicken With Giblet Store: Keells Price: 1350 LKR Size: per kg Category: Meat Availability: in stock"
+  },
+  {
+    "id": "keells_bairaha_pre_cut_chicken_skinless",
+    "text": "Bairaha Pre Cut Chicken Skinless Store: Keells Price: 1500 LKR Size: per kg Category: Meat Availability: in stock"
+  },
+  {
+    "id": "keells_bairaha_whole_chicken",
+    "text": "Bairaha Whole Chicken Store: Keells Price: 1350 LKR Size: per kg Category: Meat Availability: in stock"
+  },
+  {
+    "id": "keells_bairaha_whole_chicken_skinless",
+    "text": "Bairaha Whole Chicken Skinless Store: Keells Price: 1360 LKR Size: per kg Category: Meat Availability: in stock"
+  },
+  {
+    "id": "keells_chicken_boneless_thigh",
+    "text": "Chicken Boneless Thigh Store: Keells Price: 2250 LKR Size: per kg Category: Meat Availability: in stock"
+  },
+  {
+    "id": "keells_chicken_breast_boneless",
+    "text": "Chicken Breast Boneless Store: Keells Price: 2250 LKR Size: per kg Category: Meat Availability: in stock"
+  },
+  {
+    "id": "keells_chicken_drumsticks_skin_on",
+    "text": "Chicken Drumsticks Skin On Store: Keells Price: 1450 LKR Size: per kg Category: Meat Availability: in stock"
+  },
+  {
+    "id": "keells_chicken_drumsticks_skinless",
+    "text": "Chicken Drumsticks Skinless Store: Keells Price: 1690 LKR Size: per kg Category: Meat Availability: in stock"
+  },
+  {
+    "id": "keells_chicken_full_breast_skinless",
+    "text": "Chicken Full Breast Skinless Store: Keells Price: 1780 LKR Size: per kg Category: Meat Availability: in stock"
+  },
+  {
+    "id": "keells_chicken_gizzard",
+    "text": "Chicken Gizzard Store: Keells Price: 1190 LKR Size: per kg Category: Meat Availability: in stock"
+  },
+  {
+    "id": "keells_chicken_liver",
+    "text": "Chicken Liver Store: Keells Price: 1090 LKR Size: per kg Category: Meat Availability: in stock"
+  },
+  {
+    "id": "keells_chicken_neck",
+    "text": "Chicken Neck Store: Keells Price: 990 LKR Size: per kg Category: Meat Availability: in stock"
+  },
+  {
+    "id": "keells_chicken_thigh_skin_on",
+    "text": "Chicken Thigh Skin On Store: Keells Price: 1590 LKR Size: per kg Category: Meat Availability: in stock"
+  },
+  {
+    "id": "keells_chicken_thigh_skinless",
+    "text": "Chicken Thigh Skinless Store: Keells Price: 1790 LKR Size: per kg Category: Meat Availability: in stock"
+  },
+  {
+    "id": "keells_chicken_whole_legs_skin_on",
+    "text": "Chicken Whole Legs Skin On Store: Keells Price: 1450 LKR Size: per kg Category: Meat Availability: in stock"
+  },
+  {
+    "id": "keells_chicken_whole_legs_skinless",
+    "text": "Chicken Whole Legs Skinless Store: Keells Price: 1750 LKR Size: per kg Category: Meat Availability: in stock"
+  },
+  {
+    "id": "keells_chicken_winglets",
+    "text": "Chicken Winglets Store: Keells Price: 1430 LKR Size: per kg Category: Meat Availability: in stock"
+  },
+  {
+    "id": "keells_curry_leaves",
+    "text": "Curry Leaves Store: Keells Price: 440 LKR Size: per kg Category: Grocery Availability: in stock"
+  },
+  {
+    "id": "keells_egg_plant",
+    "text": "Egg Plant Store: Keells Price: 760 LKR Size: per kg Category: Grocery Availability: in stock"
+  },
+  {
+    "id": "keells_gotukola_chopped",
+    "text": "Gotukola (Chopped) Store: Keells Price: 180 LKR Size: per unit Category: Grocery Availability: in stock"
+  },
+  {
+    "id": "keells_mukunuwenna_chopped",
+    "text": "Mukunuwenna (Chopped) Store: Keells Price: 180 LKR Size: per unit Category: Grocery Availability: in stock"
+  },
+  {
+    "id": "keells_garlic",
+    "text": "Garlic Store: Keells Price: 850 LKR Size: per kg Category: Vegetable Availability: in stock"
+  },
+  {
+    "id": "keells_ginger",
+    "text": "Ginger Store: Keells Price: 1200 LKR Size: per kg Category: Vegetable Availability: in stock"
+  },
+  {
+    "id": "keells_button_mushroom",
+    "text": "Button Mushroom Store: Keells Price: 595 LKR Size: per unit Category: Grocery Availability: in stock"
+  },
+  {
+    "id": "keells_green_beans",
+    "text": "Green Beans Store: Keells Price: 690 LKR Size: per kg Category: Vegetable Availability: in stock"
+  },
+  {
+    "id": "keells_green_chilies",
+    "text": "Green Chilies Store: Keells Price: 880 LKR Size: per kg Category: Grocery Availability: in stock"
+  },
+  {
+    "id": "keells_green_cucumber",
+    "text": "Green Cucumber Store: Keells Price: 390 LKR Size: per kg Category: Grocery Availability: in stock"
+  },
+  {
+    "id": "keells_iceberg_lettuce",
+    "text": "Iceberg Lettuce Store: Keells Price: 1450 LKR Size: per kg Category: Grocery Availability: in stock"
+  },
+  {
+    "id": "keells_knolkhol",
+    "text": "Knolkhol Store: Keells Price: 290 LKR Size: per kg Category: Grocery Availability: in stock"
+  },
+  {
+    "id": "keells_kohila",
+    "text": "Kohila Store: Keells Price: 520 LKR Size: per kg Category: Grocery Availability: in stock"
+  },
+  {
+    "id": "keells_ladies_fingers",
+    "text": "Ladies Fingers Store: Keells Price: 270 LKR Size: per kg Category: Grocery Availability: in stock"
+  },
+  {
+    "id": "keells_batavia_lettuce",
+    "text": "Batavia Lettuce Store: Keells Price: 460 LKR Size: per unit Category: Grocery Availability: in stock"
+  }
+]
