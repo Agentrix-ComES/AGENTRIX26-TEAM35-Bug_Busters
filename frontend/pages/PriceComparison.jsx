@@ -64,6 +64,61 @@ const PriceComparison = ({ plan }) => {
                 </div>
             </div>
 
+            {plan.finalRecommendation && (
+                <div className="card" style={{marginTop: '20px', borderLeft: '4px solid #4ade80'}}>
+                    <h2>{plan.finalRecommendation.title}</h2>
+                    <p>{plan.finalRecommendation.summary}</p>
+                    <p><strong>Next Action:</strong> {plan.finalRecommendation.nextBestAction}</p>
+                </div>
+            )}
+
+            {plan.budgetHealth && (
+                <div className="card" style={{marginTop: '20px'}}>
+                    <h2>Budget Health: {plan.budgetHealth.status}</h2>
+                    <p>{plan.budgetHealth.message}</p>
+                    <p>Estimated Total: Rs. {plan.budgetHealth.estimatedTotal.toLocaleString()} / Budget: Rs. {plan.budgetHealth.budget.toLocaleString()}</p>
+                </div>
+            )}
+
+            {plan.savingsExplanation && (
+                <div className="card" style={{marginTop: '20px'}}>
+                    <h2>Savings Explanation</h2>
+                    <p>{plan.savingsExplanation.summary}</p>
+                    <p><strong>Baseline Store:</strong> {plan.savingsExplanation.baselineStore} | <strong>Strategy:</strong> {plan.savingsExplanation.optimizedStrategy}</p>
+                </div>
+            )}
+
+            {plan.pantryImpact && (
+                <div className="card" style={{marginTop: '20px'}}>
+                    <h2>Pantry Impact</h2>
+                    <p>{plan.pantryImpact.note}</p>
+                    <p><strong>Items Avoided:</strong> {plan.pantryImpact.combinedPantryItems.join(', ') || 'None'}</p>
+                </div>
+            )}
+
+            {plan.receiptExtraction && plan.receiptExtraction.enabled && (
+                <div className="card" style={{marginTop: '20px'}}>
+                    <h2>Receipt Extraction</h2>
+                    <p>{plan.receiptExtraction.note}</p>
+                    <p><strong>Extracted:</strong> {plan.receiptExtraction.extractedItems.join(', ')}</p>
+                </div>
+            )}
+
+            {plan.storeBasketStrategy && (
+                <div className="card" style={{marginTop: '20px'}}>
+                    <h2>Store Basket Strategy</h2>
+                    {plan.storeBasketStrategy.map((basket, idx) => (
+                        <div key={idx} style={{marginBottom: '10px'}}>
+                            <h3>{basket.store} - Rs. {basket.estimatedStoreTotal.toLocaleString()}</h3>
+                            <p>{basket.reason}</p>
+                            <ul>
+                                {basket.items.map((item, i) => <li key={i}>{item}</li>)}
+                            </ul>
+                        </div>
+                    ))}
+                </div>
+            )}
+
             <div className="button-group">
                 <button className="btn btn-secondary">View Details</button>
                 <button className="btn btn-primary" onClick={() => navigate('/')}>

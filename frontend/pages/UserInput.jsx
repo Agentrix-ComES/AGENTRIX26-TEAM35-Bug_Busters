@@ -15,7 +15,8 @@ const UserInput = ({ setPlanData }) => {
         budget: 15000,
         dietPreference: 'No Preference',
         pantryItems: '',
-        location: 'Colombo'
+        location: 'Colombo',
+        receiptText: ''
     });
 
     const handleChange = (e) => {
@@ -111,6 +112,17 @@ const UserInput = ({ setPlanData }) => {
                             onChange={handleChange}
                             placeholder="Colombo"
                             required
+                        />
+                    </div>
+
+                    <div className="form-group">
+                        <label>Receipt Text (Optional)</label>
+                        <textarea
+                            name="receiptText"
+                            value={formData.receiptText}
+                            onChange={handleChange}
+                            placeholder="Paste your receipt text here..."
+                            rows="4"
                         />
                     </div>
 

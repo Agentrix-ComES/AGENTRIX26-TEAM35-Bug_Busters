@@ -99,6 +99,38 @@ Below are three demo scenarios you can run using standard command-line tools to 
 
 ---
 
+### Scenario D: GrocerMind Pro Demo (New Features)
+**Goal**: Show off the new Pro features, including receipt parsing, smart family scaling, budget health evaluation, store basket strategy grouping, and more.
+
+- **PowerShell (Windows)**:
+  ```powershell
+  $body = @{
+    weeklyBudgetLKR = 12000
+    familySize = 4
+    dietPreference = "balanced"
+    pantryItems = @("rice")
+    location = "Galle"
+    receiptText = "Dhal 1kg`nEggs 10 pack`nCoconut 2"
+  }
+  Invoke-RestMethod -Uri "http://localhost:3000/api/plan" -Method Post -ContentType "application/json" -Body ($body | ConvertTo-Json) | ConvertTo-Json -Depth 5
+  ```
+
+- **Bash / macOS / Linux**:
+  ```bash
+  curl -X POST http://localhost:3000/api/plan \
+       -H "Content-Type: application/json" \
+       -d '{"weeklyBudgetLKR": 12000, "familySize": 4, "dietPreference": "balanced", "pantryItems": ["rice"], "location": "Galle", "receiptText": "Dhal 1kg\nEggs 10 pack\nCoconut 2"}'
+  ```
+
+- **Expected Outcome**:
+  - `receiptExtraction` parses items from the receipt text.
+  - `pantryImpact` shows combined pantry avoidance.
+  - `budgetHealth` provides status based on total vs budget.
+  - `storeBasketStrategy` groups items by vendor for easy shopping.
+  - `savingsExplanation` and `finalRecommendation` summarize the agentic outcome.
+
+---
+
 ## 3. Demo Sequence Diagram
 
 This sequence diagram illustrates how a successful request traverses the server during a demo presentation:

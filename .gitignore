@@ -1,6 +1,6 @@
 node_modules/
 backend/node_modules/
-
+.env.example
 *.log
 *.pid
 run-backend.ps1

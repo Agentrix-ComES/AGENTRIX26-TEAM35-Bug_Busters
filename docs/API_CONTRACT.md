@@ -26,9 +26,10 @@ Generate a budget-optimized meal plan, shopping list, store price comparison, an
 | :--- | :--- | :--- | :---: | :---: | :--- |
 | `budget` | Number | Target weekly grocery budget in LKR. | Yes (Partial) | **Yes** | `12000` |
 | `pantryItems` | Array (String) | List of items already at home (to exclude from shopping). Defaults to `[]`. | No | **Yes** | `["rice", "dhal"]` |
-| `familySize` | Number | Number of family members. | No | **No (Ignored)** | `4` |
+| `familySize` | Number | Number of family members. | No | **Yes (Pro)** | `4` |
 | `dietaryPreference` | String | Dietary restriction (e.g., vegetarian, balanced). | No | **No (Ignored)** | `"balanced"` |
 | `location` | String | User location for regional availability. | No | **No (Ignored)** | `"Galle"` |
+| `receiptText` | String | Plain text receipt to extract pantry items from. | No | **Yes (Pro)** | `"Dhal 1kg\nEggs"` |
 
 > [!WARNING]
 > The backend destructures **only** `budget` and `pantryItems` from the request body. Other fields like `familySize`, `dietaryPreference` (or `dietPreference`), and `location` are completely ignored by the current implementation. If the frontend sends budget under a different name (e.g. `weeklyBudgetLKR`), the backend will not recognize it, and will bypass budget filtering.
@@ -107,6 +108,15 @@ Returns the sequence of agents executed, a summary of RAG data retrieved, the fi
 - **`totalEstimatedCost`** *(Number)*: Combined optimized cost in LKR.
 - **`estimatedSavings`** *(Number)*: Cost differential vs shopping entirely at the Keells baseline (defined as `Keells price || recommendedPrice`).
 - **`notes`** *(Array of Strings)*: Agent-generated commentary or warnings.
+
+**GrocerMind Pro Demo Features (Additive Post-MVP):**
+- **`receiptExtraction`** *(Object)*: Text-based parsing of receipt string into pantry items (Note: OCR/Image parsing is not implemented).
+- **`pantryImpact`** *(Object)*: Analytics on how pantry and receipt items reduced purchases.
+- **`householdScaling`** *(Object)*: Information on quantity estimations based on `familySize`.
+- **`storeBasketStrategy`** *(Array)*: Grouping of shopping list items by recommended vendor for easier fulfillment.
+- **`savingsExplanation`** *(Object)*: Natural language rationale for the optimization engine.
+- **`budgetHealth`** *(Object)*: Budget evaluation score (`within_budget`, `near_limit`, or `over_budget`).
+- **`finalRecommendation`** *(Object)*: Executive summary with next best action for the user.
 
 #### Example Response Body (Actual Golden Response)
 ```json
