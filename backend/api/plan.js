@@ -8,6 +8,15 @@ const costService = require("../services/costService");
 router.post("/plan", async (req, res) => {
   const userInput = req.body;
 
+  let budgetVal = userInput.budget !== undefined ? userInput.budget : userInput.weeklyBudgetLKR;
+  budgetVal = Number(budgetVal);
+
+  if (!Number.isFinite(budgetVal) || budgetVal <= 0) {
+    return res.status(400).json({ error: "A valid numeric budget or weeklyBudgetLKR is required." });
+  }
+
+  userInput.budget = budgetVal;
+
   // Supervisor Agent -> RAG Retrieval Agent
   const priceContext = priceService.getPriceContext(userInput);
 
