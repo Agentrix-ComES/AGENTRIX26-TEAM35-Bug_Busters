@@ -1,0 +1,76 @@
+.table-responsive {
+    overflow-x: auto;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.comparison-table th {
+    background-color: #f8f9fa;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: var(--muted-color);
+    border-bottom: 2px solid #eee;
+}
+
+.comparison-table td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    font-size: 1rem;
+}
+
+.comparison-table tr:last-child td {
+    border-bottom: none;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.best-price {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.summary-card {
+    text-align: center;
+    padding: 25px;
+}
+
+.summary-card.highlight {
+    border: 2px solid var(--primary-color);
+    background-color: #eef8f3;
+}
+
+.summary-label {
+    color: var(--muted-color);
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.summary-value {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    .summary-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "familySize": 4,
+    "budget": 15000,
+    "dietPreference": "halal",
+    "pantryItems": [
+        "rice",
+        "onion"
+    ],
+    "location": "Colombo"
+}

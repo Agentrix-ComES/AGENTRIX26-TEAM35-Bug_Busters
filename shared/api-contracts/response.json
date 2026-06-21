@@ -1,0 +1,44 @@
+{
+    "workflow": [
+        "Supervisor Agent",
+        "RAG Retrieval Agent",
+        "Meal Planning Agent",
+        "Shopping List Agent",
+        "Price Optimization Agent",
+        "Savings Summary Agent"
+    ],
+    "priceContext": {
+        "source": "dummy-grocery-price-dataset",
+        "itemCount": 108,
+        "affordableItemCount": 97,
+        "sampleAffordableItems": []
+    },
+    "mealPlan": [
+        {
+            "day": "Monday",
+            "meal": "Cabbage curry with Seven Star Chakki Atta Flour"
+        }
+    ],
+    "shoppingList": [
+        {
+            "name": "Cabbage",
+            "quantity": "500 g"
+        }
+    ],
+    "vendorTable": [
+        {
+            "item": "Cabbage",
+            "quantity": "500 g",
+            "prices": {
+                "Cargills": 70,
+                "Keells": 136
+            },
+            "recommendedStore": "Cargills",
+            "recommendedPrice": 70,
+            "matched": true
+        }
+    ],
+    "totalEstimatedCost": 1513,
+    "estimatedSavings": 66,
+    "notes": []
+}

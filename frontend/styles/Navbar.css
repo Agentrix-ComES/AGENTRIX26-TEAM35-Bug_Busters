@@ -1,0 +1,63 @@
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--border-color);
+    z-index: 1000;
+    padding: 12px 0;
+}
+
+.navbar-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.navbar-brand {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--primary-dark);
+    text-decoration: none;
+}
+
+.navbar-account {
+    align-items: center;
+    display: flex;
+    gap: 14px;
+}
+
+.navbar-account a,
+.navbar-login {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.navbar-account span {
+    color: var(--muted-color);
+    font-size: 0.9rem;
+    max-width: 180px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.navbar-account button {
+    background: #e9eeeb;
+    border: 0;
+    border-radius: 8px;
+    color: var(--text-color);
+    cursor: pointer;
+    font-weight: 800;
+    padding: 8px 12px;
+}
+
+@media (max-width: 480px) {
+    .navbar-account span {
+        display: none;
+    }
+}
